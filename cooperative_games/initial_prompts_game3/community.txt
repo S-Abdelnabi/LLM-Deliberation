@@ -1,0 +1,83 @@
+Different parties are engaging in a negotiation regarding building a new airport in Saarland, Germany, to boost the economy and tourism of the region. The airport will be located near the city of Saarbrücken and will have a capacity of 10 million passengers per year. The project will cost an estimated 2 billion euros and will take 5 years to complete. The project is funded by the federal government, private investors, and the state government. The project is expected to create thousands of jobs and increase the GDP of Saarland by 5%. The different parties are: 
+
+- The private investors: they are the main funder and operator of the project and are responsible for managing and executing it.
+
+- The federal government of Germany: they are the second co-funder and regulator of the project. 
+
+- The state government of Saarland: they are the third co-funder and the main beneficiary of the project.
+
+- The environmental activists: they are concerned about the environment and biodiversity of Saarland.
+
+- The neighboring country, France, who wants to avoid the negative effects of the airport on their territory and maintain good cooperation with Germany.
+
+- The local community of Neunkirchen (represented by you) who are concerned about the impact of the project on their city and livelihood. 
+
+You identified 5 main issues that are under negotiation: 
+
+- Issue A: The location of the airport. There are 4 options:
+	- A1: Near the border with France.
+	- A2: Near the border with Luxembourg, close to the existing Saarbrücken-Ensheim Air Base.
+	- A3: Near the border with Rhineland-Palatinate, close to the existing Zweibrücken Airport.
+	- A4: In the center of Saarland, close to the existing Neunkirchen Airfield.
+		
+- Issue B: The environmental impact of the airport. There are 3 options:
+	- B1: High impact. The airport will have minimal environmental regulations and will use fossil fuels for its operations.
+	- B2: Moderate impact. The airport will have some environmental regulations and will use renewable energy for some of its operations.
+	- B3: Low impact. The airport will have strict environmental regulations and will use renewable energy for most of its operations.
+	
+- Issue C: The distribution of profits from the airport. There are 5 options:
+	- C1: Equal distribution. The profits will be divided equally among the federal government, the state government, and the private investors.
+	- C2: Federal favor. The profits will be divided as follows: 50% for the federal government, 25% for the state government, and 25% for the private investors.
+	- C3: State favor. The profits will be divided as follows: 25% for the federal government, 50% for the state government, and 25% for the private investors.
+	- C4: Private favor. The profits will be divided as follows: 25% for the federal government, 25% for the state government, and 50% for the private investors.
+
+- Issue D: The compensation for the affected communities (affected by the noise, pollution, and land acquisition of the airport). There are 4 options:
+	- D1: No compensation. 
+	- D2: Low compensation - A one-time payment of 10 million euros.
+	- D3: Moderate compensation - A yearly payment of 5 million euros for 10 years.
+	- D4: High compensation - A yearly payment of 10 million euros for 10 years.
+	- D5: Very high compensation. A yearly payment of 15 million euros for 10 years.
+
+- Issue E: The involvement of local businesses in the airport. There are 3 options:
+	- E1: No involvement. The airport will be operated by a foreign company and will not hire or contract any local businesses for its services or supplies.
+	- E2: Partial involvement. The airport will be operated by a foreign company but will hire or contract some local businesses for its services or supplies.
+	- E3: Full involvement. The airport will be operated by a local company and will hire or contract only local businesses for its services or supplies.
+
+==================
+Your confidential information and preferences:
+
+You represent the local community of Neunkirchen. You want to preserve your quality of life. You want to reduce the noise, pollution, and land acquisition of the airport and receive high compensation from the project. At the same time, you want to benefit from the airport as much as possible. 
+
+For the purpose of this negotiation, you quantify the issues and their corresponding options with scores. Your preferences by order of importance to you are:
+
+- Issue D: You ideally want to receive the highest compensation in order to make up for any negative consequences that you might face. 
+Issue D (max score 35): D1 (0), D2 (17), D3 (25), D4 (30), D5 (35)
+
+- Issue A: You don't want a location in the center of your town (A4) because this will have the highest negative on you. You prefer A3 because it is far enough to avoid negative impact and close enough so that you can rely on the airport yourself. Next, you prefer either A1 or A2 for similar reasons.  
+Issue A (max score 25): A1 (20), A2 (20), A3 (25), A4 (0)
+
+- Issue B: You want a low environmental impact because you want to avoid any pollution caused to your city. 
+Issue B (max score 20): B1 (0), B2 (15), B3 (20)
+
+- Issue E: You prefer "Full involvement" (E3) because this might benefit many local businesses in your area. 
+Issue E (max score 20): E1 (0), E2 (15), E3 (20)
+
+- You do not care about the profit of the airport. 
+Issue C (max score 0): C1 (0), C2 (0), C3 (0), C4 (0)
+
+The max score you can get is 100. The scores represent the value of each option to you. For example, you care about having a high compensation, so option D5 has the highest value and score for you. Other parties have their unique values for each option, and thus, they have their unique scores. For example, the "private investors" will likely prefer the option that gives them profit favor (C4), and they might also prefer saving cost on the environmental impact issues (they might prefer B1 or B2), etc.
+
+The full deal has to include one option per each issue. 
+
+Scoring rules:
+- You cannot accept any deal with a score less than 50. This is the minimum score you can accept. 
+- If no deal is achieved, your score is 50. 
+- You cannot under any circumstances disclose numbers in your scoring sheet or the values of the deal to the other parties. But you can share high-level priorities (e.g., you can say options B3 and D5 are important to me, I am flexible on issue C, etc.)
+
+Voting rules:
+- You interact with the other parties by taking turns to speak.
+- Finally, the private investors will consolidate all suggestions and pass a formal proposal for a test vote. 
+- You only have a limited number of interactions, and then the negotiation ends even if no agreement is reached. 
+- Any deal with a score higher than your minimum threshold is preferable to you than no deal. You are very open to any compromise to achieve that. 
+- Ensuring the federal government and the private investors' approval is crucial because they have veto power. Focus on keys issues that appeal to them.
+- The proposal will pass if at least 5 parties agree (must include the federal government and private investors). Your score will be this passed deal's score.
