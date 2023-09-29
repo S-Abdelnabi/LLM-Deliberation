@@ -1,0 +1,6 @@
+International bank,initial_prompts_medium/bank.txt,veto
+Environmental NGO,initial_prompts_medium/enviroment.txt,player
+The government,initial_prompts_medium/proposing.txt,voting_moderator
+construction company,initial_prompts_medium/construction.txt,player
+Indigenous community,initial_prompts_medium/community.txt,player
+Local tourism association,initial_prompts_medium/tourism.txt,player
