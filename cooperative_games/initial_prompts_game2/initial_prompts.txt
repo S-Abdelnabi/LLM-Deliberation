@@ -1,0 +1,6 @@
+Foreign agency,initial_prompts/foreign_agency.txt,veto
+Project manager,initial_prompts/project_manager.txt,voting_moderator
+The government,initial_prompts/government.txt,player
+Landowners,initial_prompts/landowners.txt,player
+NGO,initial_prompts/NGO.txt,player
+Activists,initial_prompts/activists.txt,player
