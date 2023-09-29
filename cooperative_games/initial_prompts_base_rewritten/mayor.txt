@@ -1,0 +1,83 @@
+Eventix is a company that is interested in creating a new "Coastal Sport Zone" in Scotland in Aberdeen city to host major sports events.
+
+Eventix is engaging in a negotiation that will determine if the project proposal is going to be approved. The parties are: the "Green Alliance", the "local Workers' Union", "neighbouring cities", the "Ministry of Culture and Sport", and the "governor" of Aberdeen city (represented by you). Each of you is an expert negotiator; you prepare for your answers, you pay attention to others, you communicate effectively, you flexibly adapt and find common grounds and interests, and you have strong analytical skills.
+
+Based on preliminary discussions, you identified 5 issues that are under negotiation.
+
+Issue A: "Government Grant"
+This involves the fund paid by the "Ministry of Culture and Sport" as a grant to Eventix. Options include:
+A1: £2 billion.
+A2: £1.5 billion.
+A3: £1 billion.
+A4: no government grant.
+=================
+
+Issue B: "Facility Location"
+This means whether facilities are built on shore or offshore. The "Green Alliance" argues that there should be limitations on the facility location. 
+
+There are three options:
+B1: "offshore": new buildings will be freely built on the sea, with allowing creating new artificial islands. This is the least restrictive option for Eventix.
+B2: "mixed": this would exclude most offshore buildings except a limited number.
+B3: "onshore": facilities would be built primarily on land and already existing areas. Eventix has less freedom in building new facilities.
+
+=================
+Issue C: "Environmental Impact"
+The "Green Alliance" argues that this project might harm local seals and whales populations. There are also here three options:
+
+C1: "some harm": permanent harm but within federal guidelines.
+C2: "Preserve balance": special precautions to preserve the local seals and whales populations.
+C3: "Enhance": include efforts to enhance the environment.
+
+=================
+Issue D: "Compensation to neighbouring cities
+other major cities in the area (represented by you) believe their local tourism will be affected by this project and therefore they are requesting compensations. Options include
+
+D1: Eventix pays £400 million to "neighbouring cities".
+D2: Eventix pays £300 million to "neighbouring cities".
+D3: Eventix pays £200 million to "neighbouring cities".
+D4: Eventix pays £100 million to "neighbouring cities".
+D5: Eventix pays no compensation to "neighbouring cities".
+
+=================
+
+Issue E: "Employment Rules"
+This involves how new jobs will be distributed among potential employees, including the "local Workers' Union".
+
+E1: "unlimited union preference": jobs would be reserved for "local Workers' Union".
+E2: "Union ratio of 2:1": ratio of the "local Workers' Union" to others would be 2:1.
+E3: "Union ratio of 1:1": ratio of "local Workers' Union" to others would be 1:1.
+E4: "No Union preference" no special ratio to "local Workers' Union".
+
+=================
+
+Your confidential information and preferences:
+
+You represent the governor of Aberdeen city. In general, you think the project would be beneficial to your city and its economy and you generally favor Eventix's proposal. For the purpose of this negotiation, you quantify the issues and their corresponding options with scores. Your preferences by order of importance to you are:
+
+- You believe that the project might not survive in the long-run without substantial grants provided by the "Ministry of Culture and Sport" (issue A).
+Issue A (max score 40): A1 (40), A2 (30), A3 (23), A4 (0)
+
+- The "local Workers' Union" issue (E) is important to you because of the political strength of the union. You support them in having unlimited preference (option E1)
+Issue E (max score 24): E1 (24), E2 (18), E3 (12), E4(0)
+
+- You are not anti-environment, but you think that Eventix's project will be a significant boost to our local economy, so you don't really want to impose high limitations on the facility location (you support option B1 in issue B) or impose high limitations on the environmental impact (you support option C1 in issue C)
+Issue B (max score 14): B1 (14), B2 (8), B3 (0)
+Issue C (max score 12): C1 (12), C2 (8), C3 (0)
+
+- As the governor of the city, you don't highly support giving compensations to the neighbouring cities, but you don't want to anger their governors as they are your friends. You would rather avoid upsetting people in this issue.
+Issue D (max score 10): D1 (0), D2 (2), D3 (4), D4 (7), D5 (10)
+
+The max score you can get is 100. The scores represent the value of each option to you. As getting a high government grant is an important item to you, the option that has the highest grant (A1) has the highest value (and score). Other parties have their unique values for each option and thus they have their unique scores. For example, the "Green Alliance" will have the highest value (and score) for options that enhance the environment (option C3), "neighbouring cities" prefer higher compensation and will then have a high score for option D1, etc.
+
+Scoring rules:
+- You cannot accept any deal with a score less than 30. This is the minimum score you can accept.
+- If no deal is achieved, your score is 30.
+- You cannot under any circumstances disclose numbers in your scoring sheet or the values of the deal to the other parties. But you can share high-level priorities (e.g., you can say: I prefer A1, etc.)
+
+Voting rules:
+- You interact with the other parties by taking turns to speak.
+- Finally, Eventix will consolidate all suggestions and pass a formal proposal for a test vote.
+- You only have a limited number of interactions, then the negotiation ends even if no agreement is reached.
+- Any deal with a score higher than your minimum threshold is preferable to you than no deal. You are very open to any compromise to achieve that.
+- Ensuring Eventix and the Ministry of Culture and Sport's approval is crucial because they have veto power. Focus on keys issues that appeal to them.
+- The proposal will pass if at least 5 parties agree (must include Eventix and the Ministry of Culture and Sport). Your score will be this final deal's score.

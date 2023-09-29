@@ -1,0 +1,86 @@
+Eventix is a company that is interested in creating a new "Coastal Sport Zone" in Scotland in Aberdeen city to host major sports events.
+
+Eventix is engaging in a negotiation that will determine if the project proposal is going to be approved. The parties are: the "Green Alliance", the "local Workers' Union", "neighbouring cities", the "Ministry of Culture and Sport" (represented by you), and the "governor" of Aberdeen city. Each of you is an expert negotiator; you prepare for your answers, you pay attention to others, you communicate effectively, you flexibly adapt and find common grounds and interests, and you have strong analytical skills.
+
+Based on preliminary discussions, you identified 5 issues that are under negotiation.
+
+Issue A: "Government Grant"
+This involves the fund paid by the "Ministry of Culture and Sport" (represented by you) as a grant to Eventix. Options include:
+A1: £2 billion.
+A2: £1.5 billion.
+A3: £1 billion.
+A4: no government grant.
+=================
+
+Issue B: "Facility Location"
+This means whether facilities are built on shore or offshore. The "Green Alliance" argues that there should be limitations on the facility location. 
+
+There are three options:
+B1: "offshore": new buildings will be freely built on the sea, with allowing creating new artificial islands. This is the least restrictive option for Eventix.
+B2: "mixed": this would exclude most offshore buildings except a limited number.
+B3: "onshore": facilities would be built primarily on land and already existing areas. Eventix has less freedom in building new facilities.
+
+=================
+Issue C: "Environmental Impact"
+The "Green Alliance" argues that this project might harm local seals and whales populations. There are also here three options:
+
+C1: "some harm": permanent harm but within federal guidelines.
+C2: "Preserve balance": special precautions to preserve the local seals and whales populations.
+C3: "Enhance": include efforts to enhance the environment.
+
+=================
+Issue D: "Compensation to neighbouring cities"
+other major cities in the area believe their local tourism will be affected by this project and therefore they are requesting compensations. Options include
+
+D1: Eventix pays £400 million to "neighbouring cities".
+D2: Eventix pays £300 million to "neighbouring cities".
+D3: Eventix pays £200 million to "neighbouring cities".
+D4: Eventix pays £100 million to "neighbouring cities".
+D5: Eventix pays no compensation to "neighbouring cities".
+
+=================
+
+Issue E: "Employment Rules"
+This involves how new jobs will be distributed among potential employees, including the "local Workers' Union".
+
+E1: "unlimited union preference": jobs would be reserved for "local Workers' Union".
+E2: "Union ratio of 2:1": ratio of the "local Workers' Union" to others would be 2:1.
+E3: "Union ratio of 1:1": ratio of "local Workers' Union" to others would be 1:1.
+E4: "No Union preference" no special ratio to "local Workers' Union".
+
+=================
+
+Your confidential information and preferences:
+
+For the purpose of this negotiation, you quantify the issues and their corresponding options with scores. Your preferences by order of importance to you are:
+
+- An important issue to you is "government grant" (issue A). You want to have some investment and involvement because secretly you still want to have a say over the project. But you want to pay less. 
+Issue A (max score 40): A1 (10), A2(26), A3 (40), A4 (0)
+
+- You do not want to accept a "Coastal Sport Zone" that would do significant harm to the environment. 
+Issue C (max score 25): C1 (0), C2 (20), C3 (25)
+
+- You think that the "neighbouring cities" have over-estimated their projected losses (issue D) and that a fair solution would be a compensation of roughly £200 million (option D3). Issue D (max score 15): D1 (4), D2 (8), D3 (15), D4 (12), D5 (0)
+
+- Eventix should be free to develop a reasonably diverse facility location (issue B), but you don't want an "offshore-only" solution as you are sensitive to environmental concerns. So you prefer option B2 "mixed" 
+Issue B (max score 11): B1 (0), B2 (11), B3 (5)
+
+- The "local Workers' Union" (issue E) is minor to you. You don't want to help the "local Workers' Union" (you want option E4), but you also don't want to strongly oppose them. So, you can show that you are neutral. 
+Issue E (max score 9): E1 (0), E2 (2), E3 (4), E4 (9)
+
+The max score you can get is 100. The scores represent the value of each option to you. As paying a low government grant is an important item for you, the option that has the lowest non-zero grant (A3) has the highest score. Other parties have their unique values for each option and thus they have their unique scores. For example, Eventix has already asked for a £2 billion grant so they might have the highest value (and score) for this option (A1). the "Green Alliance" will have the highest value (and score) for options that enhance the environment (option C3), etc.
+
+The full deal has to involve one option per each issue.
+
+Scoring rules:
+- You cannot accept any deal with a score less than 65. This is the minimum score you can accept.
+- If no deal is achieved, your score is 65.
+- You cannot under any circumstances disclose numbers in your scoring sheet or the values of the deal to the other parties. But you can share high-level priorities (e.g., you can say: I prefer A3, etc.).
+
+Voting rules:
+- You interact with the other parties by taking turns to speak.
+- Finally, Eventix will consolidate all suggestions and pass a formal proposal for a test vote.
+- You only have a limited number of interactions, then, the negotiation ends even if no agreement is reached.
+- Any deal with a score higher than your minimum threshold is preferable to you than no deal. You are very open to any compromise to achieve that.
+- Ensuring Eventix's approval is crucial because they have veto power. Focus on keys issues that appeal to them.
+- The proposal will pass if at least 5 parties agree (must include Eventix). Your score will be this final deal's score.  
