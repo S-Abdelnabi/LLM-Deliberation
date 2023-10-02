@@ -1,6 +1,6 @@
-Federal government,initial_prompts/federal.txt,veto
-Private investors,initial_prompts/private_investors.txt,voting_moderator
-State government,initial_prompts/state.txt,player
-Environmental activists,initial_prompts/activists.txt,player
-France,initial_prompts/france.txt,player
-Neunkirchen community,initial_prompts/community.txt,player
+Federal government,initial_prompts_game3/federal.txt,veto
+Private investors,initial_prompts_game3/private_investors.txt,voting_moderator
+State government,initial_prompts_game3/state.txt,player
+Environmental activists,initial_prompts_game3/activists.txt,player
+France,initial_prompts_game3/france.txt,player
+Neunkirchen community,initial_prompts_game3/community.txt,player
