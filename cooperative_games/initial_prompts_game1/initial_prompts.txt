@@ -1,6 +1,6 @@
-International bank,initial_prompts_medium/bank.txt,veto
-Environmental NGO,initial_prompts_medium/enviroment.txt,player
-The government,initial_prompts_medium/proposing.txt,voting_moderator
-construction company,initial_prompts_medium/construction.txt,player
-Indigenous community,initial_prompts_medium/community.txt,player
-Local tourism association,initial_prompts_medium/tourism.txt,player
+International bank,initial_prompts_game1/bank.txt,veto
+Environmental NGO,initial_prompts_game1/enviroment.txt,player
+The government,initial_prompts_game1/proposing.txt,voting_moderator
+construction company,initial_prompts_game1/construction.txt,player
+Indigenous community,initial_prompts_game1/community.txt,player
+Local tourism association,initial_prompts_game1/tourism.txt,player
