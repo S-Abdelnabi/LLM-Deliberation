@@ -1,6 +1,6 @@
-The Department of Tourism,initial_prompts/DoT.txt,veto
-The Environmental League,initial_prompts/enviroment.txt,player
-The Mayor,initial_prompts/mayor.txt,player
-Other Cities,initial_prompts/other_cities.txt,player
-SportCo,initial_prompts/SportCo.txt,voting_moderator
-The local Labour Union,initial_prompts/union.txt,player
+The Department of Tourism,initial_prompts_base/DoT.txt,veto
+The Environmental League,initial_prompts_base/enviroment.txt,player
+The Mayor,initial_prompts_base/mayor.txt,player
+Other Cities,initial_prompts_base/other_cities.txt,player
+SportCo,initial_prompts_base/SportCo.txt,voting_moderator
+The local Labour Union,initial_prompts_base/union.txt,player
