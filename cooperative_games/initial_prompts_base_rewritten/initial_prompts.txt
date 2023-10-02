@@ -1,6 +1,6 @@
-The Ministry of Culture and Sport,rewritten_prompts/department.txt,veto
-The Green Alliance,rewritten_prompts/enviroment.txt,player
-The Governor,rewritten_prompts/mayor.txt,player
-Neighbouring cities,rewritten_prompts/other_cities.txt,player
-Eventix,rewritten_prompts/company.txt,voting_moderator
-The Local Workers' Union,rewritten_prompts/union.txt,player
+The Ministry of Culture and Sport,initial_prompts_base_rewritten/department.txt,veto
+The Green Alliance,initial_prompts_base_rewritten/enviroment.txt,player
+The Governor,initial_prompts_base_rewritten/mayor.txt,player
+Neighbouring cities,initial_prompts_base_rewritten/other_cities.txt,player
+Eventix,initial_prompts_base_rewritten/company.txt,voting_moderator
+The Local Workers' Union,initial_prompts_base_rewritten/union.txt,player
