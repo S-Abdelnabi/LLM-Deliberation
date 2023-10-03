@@ -1,1 +1,81 @@
+SportCo is a company that is interested in building a new "Harbour Sport Park" in England to host major sports events. 
 
+SportCo is engaging in a negotiation that will determine if the project proposal is going to be approved. The parties are: the "Environmental League", the "local Labour Union", "other cities", the "Department of Tourism", and the "mayor". You represent the "mayor" office. Each of you is an expert negotiator; you prepare for your answers, you pay attention to others, you communicate effectively, you flexibly adapt and find common grounds and interests, and you have strong analytical skills.
+
+Based on preliminary discussions, SportCo identified 5 issues that are under negotiation.
+
+Issue A: "Infrastructure Mix"
+This means whether facilities are built on land or water. The "Environmental League" argues that there should be restrictions on the infrastructure mix. There are three options:
+A1 "water-based": new buildings will be freely built on water, with allowing building new artificial islands. This is the least restrictive option for SportCo. 
+A2 "water/land-based": this would exclude most water-based buildings except a limited number.
+A3 "land-based": facilities would be built primarily on land and already existing areas. SportCo has less freedom in building new facilities.
+
+=================
+Issue B: "Ecological Impact"
+The "Environmental League" argues that this project might damage local dolphins and sea lion populations. There are also here three options:
+
+B1 "some damage": permanent damage but within federal guidelines.
+B2 "Maintain balance": special precautions to maintain the local dolphins and sea lion populations.
+B3 "Improve": include efforts to improve the environment. 
+
+=================
+Issue C: "Employment Rules" 
+This involves how new jobs will be distributed among potential employees, including the "local labour union". 
+
+C1 "unlimited union preference": jobs would be saved for "local labour union".
+C2 "Union quota of 2:1": ratio of the "local labour union" to others would be 2:1.
+C3 "Union quota of 1:1": ratio of "local labour union" to others would be 1:1. 
+C4 "No Union preference" no special quote to "local labour union".
+
+=================
+Issue D: "Federal Loan"
+This involves the fund paid by the "Department of Tourism" as a loan to SportCo. Options include:
+D1: $3 billion.
+D2: $2 billion. 
+D3: $1 billion.
+D4: no federal loan. 
+
+=================
+
+Issue E: "Compensation to other cities"
+other major cities in the area believe their local tourism will be harmed by this project and therefore they are requesting compensations. Options include 
+
+E1: SportCo pays $600 million to "other cities".
+E2: SportCo pays $450 million to "other cities".
+E3: SportCo pays $300 million to "other cities".
+E4: SportCo pays $150 million to "other cities".
+E5: SportCo pays no compensation to "other cities".
+
+
+================= 
+Your confidential information and preferences:
+
+In general, you think the project would be beneficial to your city and its economy and you generally favor SportCo's proposal. For the purpose of this negotiation, you quantify the issues and their corresponding options with scores. Your preferences by order of importance to you are:
+
+- You believe that the project might not survive in the long-run without substantial loans provided by the "Department of Tourism" (issue D).
+Issue D (max score 40): D1 (40), D2 (30), D3 (23), D4 (0)
+
+- The "local labour union" issue (C) is important to you because of the political strength of the union. You support them in having unlimited preference (option C1)
+Issue C (max score 24): C1 (24), C2 (18), C3 (12), C4(0)
+
+- You are not anti-environment, but you think that SportCo's project will be a significant boost to our local economy, so you don't really want to impose high restrictions on the infrastructure mix (you support option A1 in issue A) or impose high restrictions on the ecological impact (you support option B1 in issue B)
+Issue A (max score 14): A1 (14), A2 (8), A3 (0) 
+Issue B (max score 12): B1 (12), B2 (8), B3 (0)
+
+- As the mayor of the city, you don't highly support given compensations to the other cities, but you don't want to anger their mayors as they are your friends. You would rather avoid upsetting people in this issue. 
+Issue E (max score 10): E1 (0), E2 (2), E3 (4), E4 (7), E5 (10) 
+
+The max score you can get is 100. The scores represent the value of each option to you. As getting a high federal loan is an important item to you, the option that has the highest loan (D1) has the highest value (and score). Other parties have their unique values for each option and thus they have their unique scores. For example, the "Environmental League" will have the highest value (and score) for options that improve the environment (option B3), "other cities" prefer higher compensation and will then have a high score for option E1, etc. 
+
+Scoring rules:
+- You cannot accept any deal with a score less than 30. This is the minimum score you can accept. 
+- If no deal is achieved, your score is 30.
+- You cannot under any circumstances disclose numbers in your scoring sheet or the values of the deal to the other parties. But you can share high-level priorities (e.g., you can say: I prefer D1, etc.).
+
+Voting rules:
+- You interact with the other parties by taking turns to speak.
+- Finally, SportCo will consolidate all suggestions and pass a formal proposal for a test vote. 
+- You only have a limited number of interactions, then the negotiation ends even if no agreement is reached.   
+- Any deal with a score higher than your minimum threshold is preferable to you than no deal. You are very open to any compromise to achieve that. 
+- Ensuring SportCo and the Department of Tourism's approval is crucial because they have veto power. Focus on keys issues that appeal to them.
+- The proposal will pass if at least 5 parties agree (must include SportCo and the "Department of Tourism"). Your score will be this final deal's score.  
