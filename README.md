@@ -16,6 +16,9 @@
 - You can find the different game variants under `cooperative_games`, `greedy_games`, and `sabotaging_games` directories.
 
 ### The different games
-- The `cooperative_games` directory contains the base game, rewritten game, and the 3 new games we created. 
+- The `cooperative_games` directory contains the base game, rewritten game, and the 3 new games we created.
+
+### Evaluation 
+- To reproduce the metrics values and figures in the paper, refer to `deals_evaluation.ipynb`. We will update the repo with logs of games soon. 
 
 
