@@ -11,7 +11,6 @@ from build_prompts_cooperative import build_slot_prompts, build_first_slot, buil
 
 parser = argparse.ArgumentParser(description='big negoitation!!')
 parser.add_argument('--api_key',type=str, default='')
-parser.add_argument('--openai_model',type=str, default='gpt-3.5-turbo-16k-0613')
 
 parser.add_argument('--temp',type=float, default='0')
 parser.add_argument('--output_file_full',type=str, default='full_conversation.json')
@@ -21,6 +20,7 @@ parser.add_argument('--agents_num',type=int, default=6)
 
 parser.add_argument('--rounds',type=int, default=24)
 parser.add_argument('--window_size',type=int, default=6)
+parser.add_argument('--votes_interval',type=int, default=24)
 
 parser.add_argument('--initial_prompts_file',type=str, default='initial_prompts_base/initial_prompts.txt')
 parser.add_argument('--initial_deal_file',type=str, default='initial_prompts_base/initial_deal.txt')
@@ -31,7 +31,7 @@ parser.add_argument('--restart',action='store_true')
 args = parser.parse_args()
 openai.api_key = args.api_key
 
-print(args.openai_model)
+
 if not os.path.isdir(args.output_dir):
     os.mkdir(args.output_dir)
 if args.restart:
@@ -77,14 +77,18 @@ def load_setup():
     roles_to_players = {}
     assert len(individual_files) == args.agents_num
     for line in individual_files:   
-        name, file, role = line.split(',') 
-        role = role.strip()        
-        if not role in roles_to_players.keys():  
-            roles_to_players[role] = []  
-        roles_to_players[role].append(name)            
+        name, file, role, model = line.split(',') 
+        model = model.strip()
+        roles = role.strip().split('&')  
+        print(roles)
+        print(model)
+        for role in roles:         
+            if not role in roles_to_players.keys():  
+                roles_to_players[role] = []  
+            roles_to_players[role].append(name)            
         file_prompt = open(file,'r')        
         initial_prompt = file_prompt.read()
-        agents[name]={'initial_prompt': initial_prompt, 'role':role}
+        agents[name]={'initial_prompt': initial_prompt, 'role':roles, 'model': model}
     with open(args.initial_deal_file, 'r') as file: 
         initial_deal = file.readline().strip()
     roles_to_players['voting_moderator'] = roles_to_players['voting_moderator'][0]  
@@ -92,7 +96,7 @@ def load_setup():
         
 def initiate_agents(agents):
     for name in agents.keys(): 
-       agent_instance = agent(agents[name]['initial_prompt'], name,args.temp,model=args.openai_model)
+       agent_instance = agent(agents[name]['initial_prompt'], name,args.temp,model=agents[name]['model'])
        agents[name]['instance'] = agent_instance
     return agents     
     
@@ -113,9 +117,6 @@ def save_full_conversation(prompt,answer, answer_type, agent_name='',new_tokens_
     if answer_type == 'deal_suggestion':
         voting_session_num = len(full_history["voting_sessions"])
         full_history["voting_sessions"][str(voting_session_num)] = {'deal_suggestion':{'prompt':prompt, "answer":answer}}
-        full_history["voting_sessions"][str(voting_session_num)]['votes']={'prompts':[], 'answers':[]}
-        full_history["voting_sessions"][str(voting_session_num)]['summary']={}
-
     write_file(full_history,output_file_full)         
     return  
 
@@ -157,6 +158,10 @@ def save_answers(answer, answer_type,agent_name='', initial=False):
             answers_history['plan'][agent_name].append(answer)
         else:
             answers_history['plan'][agent_name] = [answer]
+    if answer_type == 'deal_suggestion':
+        voting_session_num = len(answers_history["voting_sessions"])
+        answers_history["voting_sessions"][str(voting_session_num)] = {'deal_suggestion':answer}  
+
 
     write_file(answers_history,output_file_answers)         
     return      
@@ -179,7 +184,7 @@ def write_file(log_dict,output_file):
     return 
     
 def one_negotiation_round(agent_name): 
-    time.sleep(30) 
+    time.sleep(10) 
     slot_prompt = build_slot_prompts(answers_history, agent_name,roles_to_players['voting_moderator'],window_size=args.window_size,final_round=(args.rounds-round_idx)<=args.agents_num) 
     agent_response,tokens = agents[agent_name]['instance'].prompt("user", slot_prompt)    
     save_full_conversation(slot_prompt, agent_response, 'round', agent_name,new_tokens_count=tokens)   
@@ -218,10 +223,14 @@ if not args.restart:
 
     
 if round_start!=0 and round_start == args.rounds:
+    voting_session_num = str(int((round_start-1)/args.votes_interval))
     if not voting_session_num in answers_history["voting_sessions"]: 
         print(" ==== Deal Suggestions ==== ")
         deal = suggest_deal(roles_to_players['voting_moderator'],round_start==args.rounds)
         print(roles_to_players['voting_moderator'] + ": "+ deal)
+        exit()
+    else:
+        exit()    
         
 
 for round_idx in range(round_start,args.rounds): 
