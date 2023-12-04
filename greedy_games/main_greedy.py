@@ -12,8 +12,6 @@ from build_prompts_greedy import build_slot_prompts, build_first_slot, build_dea
 parser = argparse.ArgumentParser(description='big negoitation!!')
 parser.add_argument('--api_key',type=str, default=
 '')
-parser.add_argument('--openai_model',type=str, default='gpt-3.5-turbo-16k-0613')
-
 parser.add_argument('--temp',type=float, default='0')
 parser.add_argument('--output_file_full',type=str, default='full_conversation.json')
 parser.add_argument('--output_file_answers',type=str, default='answers.json')
@@ -34,7 +32,7 @@ parser.add_argument('--restart',action='store_true')
 args = parser.parse_args()
 openai.api_key = args.api_key
 
-print(args.openai_model)
+
 if not os.path.isdir(args.output_dir):
     os.mkdir(args.output_dir)
 if args.restart:
