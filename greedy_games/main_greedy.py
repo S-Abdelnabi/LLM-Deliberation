@@ -99,7 +99,7 @@ def load_setup():
         
 def initiate_agents(agents):
     for name in agents.keys(): 
-       agent_instance = agent(agents[name]['initial_prompt'], name,args.temp,model=args.openai_model)
+       agent_instance = agent(agents[name]['initial_prompt'], name,args.temp,model=agents[name]['model'])
        agents[name]['instance'] = agent_instance
     return agents     
     
