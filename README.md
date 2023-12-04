@@ -6,14 +6,12 @@
 <img src="https://github.com/S-Abdelnabi/LLM-Deliberation/blob/main/teaser_fig.PNG" width="550">
 </p>
 
-
-
 ### Setup
 - So far, the code supports OpenAI model (other models may be added in the future).
 - You need GPT-4 access and OpenAI account.
 
 ### Game variants 
-- You can find the different game variants under `cooperative_games`, `greedy_games`, and `sabotaging_games` directories.
+- You can find the different game variants under `cooperative_games`, `greedy_games`, and `sabotaging_games` directories. The corresponding directory contains information on how to run. 
 
 ### The different games
 - The `cooperative_games` directory contains the base game, rewritten game, and the 3 new games we created.
