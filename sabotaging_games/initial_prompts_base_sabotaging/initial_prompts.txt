@@ -1,6 +1,6 @@
-The Department of Tourism,initial_prompts_base_sabotaging/DoT.txt,veto
-The Environmental League,initial_prompts_base_sabotaging/enviroment_saboteur.txt,saboteur
-The Mayor,initial_prompts_base_sabotaging/mayor.txt,player
-Other Cities,initial_prompts_base_sabotaging/other_cities.txt,player
-SportCo,initial_prompts_base_sabotaging/SportCo.txt,voting_moderator
-The local Labour Union,initial_prompts_base_sabotaging/union.txt,player
+The Department of Tourism,initial_prompts_base_sabotaging/DoT.txt,veto,gpt-4-0613
+The Environmental League,initial_prompts_base_sabotaging/enviroment_saboteur.txt,saboteur,gpt-4-0613
+The Mayor,initial_prompts_base_sabotaging/mayor.txt,player,gpt-4-0613
+Other Cities,initial_prompts_base_sabotaging/other_cities.txt,player,gpt-4-0613
+SportCo,initial_prompts_base_sabotaging/SportCo.txt,voting_moderator,gpt-4-0613
+The local Labour Union,initial_prompts_base_sabotaging/union.txt,player,gpt-3.5-turbo-16k-0613
