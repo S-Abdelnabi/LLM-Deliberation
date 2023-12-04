@@ -6,7 +6,7 @@ import re
 import random 
 import numpy as np 
 import os
-from build_prompts_greedy import build_slot_prompts, build_first_slot, build_deal_suggestion_prompt,build_slot_prompts_greedy
+from build_prompts_greedy import build_slot_prompts, build_first_slot, build_deal_suggestion_prompt,build_slot_prompts_greedy,build_deal_suggestion_prompt_greedy
 
 
 parser = argparse.ArgumentParser(description='big negoitation!!')
@@ -22,6 +22,8 @@ parser.add_argument('--agents_num',type=int, default=6)
 
 parser.add_argument('--rounds',type=int, default=24)
 parser.add_argument('--window_size',type=int, default=6)
+parser.add_argument('--votes_interval',type=int, default=24)
+
 
 parser.add_argument('--initial_prompts_file',type=str, default='initial_prompts_base_greedy/initial_prompts.txt')
 parser.add_argument('--initial_deal_file',type=str, default='initial_prompts_base_greedy/initial_deal.txt')
@@ -78,14 +80,18 @@ def load_setup():
     roles_to_players = {}
     assert len(individual_files) == args.agents_num
     for line in individual_files:   
-        name, file, role = line.split(',') 
-        role = role.strip()        
-        if not role in roles_to_players.keys():  
-            roles_to_players[role] = []  
-        roles_to_players[role].append(name)            
+        name, file, role, model = line.split(',') 
+        model = model.strip()
+        roles = role.strip().split('&')  
+        print(roles)
+        print(model)
+        for role in roles:         
+            if not role in roles_to_players.keys():  
+                roles_to_players[role] = []  
+            roles_to_players[role].append(name)            
         file_prompt = open(file,'r')        
         initial_prompt = file_prompt.read()
-        agents[name]={'initial_prompt': initial_prompt, 'role':role}
+        agents[name]={'initial_prompt': initial_prompt, 'role':roles, 'model': model}
     with open(args.initial_deal_file, 'r') as file: 
         initial_deal = file.readline().strip()
     roles_to_players['voting_moderator'] = roles_to_players['voting_moderator'][0]  
@@ -114,8 +120,6 @@ def save_full_conversation(prompt,answer, answer_type, agent_name='',new_tokens_
     if answer_type == 'deal_suggestion':
         voting_session_num = len(full_history["voting_sessions"])
         full_history["voting_sessions"][str(voting_session_num)] = {'deal_suggestion':{'prompt':prompt, "answer":answer}}
-        full_history["voting_sessions"][str(voting_session_num)]['votes']={'prompts':[], 'answers':[]}
-        full_history["voting_sessions"][str(voting_session_num)]['summary']={}
 
     write_file(full_history,output_file_full)         
     return  
@@ -158,13 +162,20 @@ def save_answers(answer, answer_type,agent_name='', initial=False):
             answers_history['plan'][agent_name].append(answer)
         else:
             answers_history['plan'][agent_name] = [answer]
+    if answer_type == 'deal_suggestion':
+        voting_session_num = len(answers_history["voting_sessions"])
+        answers_history["voting_sessions"][str(voting_session_num)] = {'deal_suggestion':answer}  
+
 
     write_file(answers_history,output_file_answers)         
     return      
     
 def suggest_deal(agent_name,final_voting=False):
     #the voting_moderator should be the agent name
-    suggest_deal_prompt = build_deal_suggestion_prompt(answers_history, agent_name,final_vote=final_voting, window_size=args.window_size) 
+    if agent_name in roles_to_players["greedy"]: 
+        suggest_deal_prompt = build_deal_suggestion_prompt_greedy(answers_history, agent_name,final_vote=final_voting, window_size=args.window_size)
+    else:   
+        suggest_deal_prompt = build_deal_suggestion_prompt(answers_history, agent_name,final_vote=final_voting, window_size=args.window_size)
     agent_response_deal,tokens = agents[agent_name]['instance'].prompt("user", suggest_deal_prompt)
     save_full_conversation(suggest_deal_prompt,agent_response_deal, "deal_suggestion", roles_to_players['voting_moderator'],new_tokens_count=tokens) 
     print(agent_response_deal)    
@@ -180,7 +191,8 @@ def write_file(log_dict,output_file):
     return 
     
 def one_negotiation_round(agent_name): 
-    time.sleep(30) 
+    print(roles_to_players["greedy"])
+    time.sleep(10) 
     if agent_name in roles_to_players["greedy"]: 
         slot_prompt = build_slot_prompts_greedy(answers_history, agent_name,roles_to_players['voting_moderator'],window_size=args.window_size,final_round=(args.rounds-round_idx)<=args.agents_num) 
     else: 
@@ -206,26 +218,28 @@ initial_deal_prompt = build_first_slot(deal=initial_deal,name=roles_to_players['
 if not args.restart:
     initial_deal_response,tokens = agents[roles_to_players['voting_moderator']]['instance'].prompt("user", initial_deal_prompt)
     print(roles_to_players['voting_moderator'] + ": "+ initial_deal_response)
-
-    names = [name for name in agents.keys()]
-    last_agent = roles_to_players['voting_moderator']
-    for i in range(0,int(np.ceil(args.rounds/len(agents)))): 
-        shuffled = random.sample(names, len(names))
-        while shuffled[0] == last_agent or shuffled[-1]==roles_to_players['voting_moderator']: shuffled = random.sample(names, len(names))
-        round_assign += shuffled 
-        last_agent = shuffled[-1]
-    print(round_assign)
     #save history 
+    names = [name for name in agents.keys()]
+    shuffled = random.sample(names, len(names))
+    while shuffled[0] == roles_to_players['voting_moderator'] or shuffled[-1]==roles_to_players['voting_moderator']: shuffled = random.sample(names, len(names))
+    for i in range(0,int(np.ceil(args.rounds/len(agents)))): 
+        round_assign += shuffled 
+    print(round_assign)
     save_full_conversation(initial_deal_prompt,initial_deal_response, 'rounds', roles_to_players['voting_moderator'],new_tokens_count=tokens,round_assign=round_assign,initial=True)
     save_answers(initial_deal_response, "round", agent_name=roles_to_players['voting_moderator'],initial=True)
 
 
     
 if round_start!=0 and round_start == args.rounds:
+    voting_session_num = str(int((round_start-1)/args.votes_interval))
     if not voting_session_num in answers_history["voting_sessions"]: 
         print(" ==== Deal Suggestions ==== ")
         deal = suggest_deal(roles_to_players['voting_moderator'],round_start==args.rounds)
         print(roles_to_players['voting_moderator'] + ": "+ deal)
+        exit()
+    else:
+        exit()    
+        
         
 
 for round_idx in range(round_start,args.rounds): 

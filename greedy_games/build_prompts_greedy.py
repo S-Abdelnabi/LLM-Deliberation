@@ -100,3 +100,28 @@ def build_deal_suggestion_prompt(history, agent_name,final_vote=False,window_siz
     
     
     return slot_prompt
+    
+def build_deal_suggestion_prompt_greedy(history, agent_name,final_vote=False,window_size=6): 
+    personalized_history,last_plan = format_history(agent_name, history,agent_name)  
+    slot_prompt = " You now have an official voting session. "  
+    if final_vote: slot_prompt += "This is the final voting. "
+    
+    slot_prompt += "The following is a chronological history of up to "+str(window_size)+ " interactions <HISTORY> " + personalized_history + " </HISTORY> "      
+         
+    if last_plan:     
+        slot_prompt += "The following are your previous plans from last interactions. You should follow them while also adjusting them according to new observations. <PREV_PLAN> " + last_plan + " </PREV_PLAN> "  
+    
+    slot_prompt +=  " Your goal now is to observe others' interactions and see how you can make a final deal proposal that might maximize your score. You don't put much weight on accommodating others' preferences, and you would like to maximize your score as much as possible. You might be willing to compromise only for issues that don't matter or matter the least to you. But you have to be careful not to completely ruin the deal because you still want to have a deal that is higher than your BATNA (your minimum threshold)."
+
+    
+    slot_prompt += "You should now suggest a full deal for others to vote on. "
+
+    slot_prompt += " Please use a scratchpad to explain yourself, write down your observations, deals' calculations, and come up with a plan and a final proposal. Enclose the scratchpad between <SCRATCHPAD> and </SCRATCHPAD>. The scratchpad is secret and not seen by other parties. Your final answer is public and must never contain scores. Enclose your final answer after the scratchpad between <ANSWER> and </ANSWER>. "
+    
+    slot_prompt += "Make your final answer very short and brief in 2-3 sentences while containing your main proposals. Use options' short notations instead of long descriptions. Enclose the deal between: <DEAL> </DEAL>. "
+ 
+    #plan 
+    if not final_vote: slot_prompt += "After the final answer, building on your current move and analysis, briefly write down short notes for yourself of what exact options you can explore the next time you speak. Enclose the notes between <PLAN> and </PLAN>."
+    
+    
+    return slot_prompt
