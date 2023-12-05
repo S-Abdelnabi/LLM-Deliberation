@@ -1,7 +1,7 @@
 ## [LLM-Deliberation: Evaluating LLMs with Interactive Multi-Agent Negotiation Games](https://arxiv.org/abs/2309.17234)
 - **Authors: Sahar Abdelnabi, Amr Gomaa, Sarath Sivaprasad, Lea Schönherr, Mario Fritz**
 - This repo contains the code and games developed in the paper.
-- You can find here an example of one of our runs with GPT-4: https://amrgomaaelhady.github.io/DemoSite/ 
+- You can find [here](https://amrgomaaelhady.github.io/DemoSite/) an example of one of our runs with GPT-4 
   
 <p align="center">
 <img src="https://github.com/S-Abdelnabi/LLM-Deliberation/blob/main/teaser_fig.PNG" width="550">
