@@ -12,7 +12,7 @@
 - We added experiments to show a mix of population between GPT-3.5 and GPT-4
 
 ### Setup
-- So far, the code supports OpenAI model (other models may be added in the future).
+- So far, the code supports OpenAI model (other models will be added soon).
 - You need GPT-4 access and OpenAI account.
 
 ### Game variants 
