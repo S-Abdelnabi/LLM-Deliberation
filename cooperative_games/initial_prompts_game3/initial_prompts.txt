@@ -1,6 +1,0 @@
-Federal government,initial_prompts_game3/federal.txt,veto,gpt-4-0613
-Private investors,initial_prompts_game3/private_investors.txt,voting_moderator,gpt-4-0613
-State government,initial_prompts_game3/state.txt,player,gpt-4-0613
-Environmental activists,initial_prompts_game3/activists.txt,player,gpt-4-0613
-France,initial_prompts_game3/france.txt,player,gpt-4-0613
-Neunkirchen community,initial_prompts_game3/community.txt,player,gpt-4-0613
