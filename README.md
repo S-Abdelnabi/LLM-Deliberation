@@ -97,15 +97,75 @@ final_initial_prompt = self.global_instructions + '\n' + self.individual_instruc
 - `InitialPrompt` class supports changing the number of agents and the number of classes and it takes `p1` and `p2` from `main.py` (more details later). It also call the incentive-specific functions based on the agents' incentives defined in the `config.txt` files. 
 
 2- **round prompts**
-  
+- The rounds' prompts get appended to the initial prompts at each interaction.
+- Round prompts are constructed as:
+```python
+slot_prompt = history_prompt + scratch_pad + unified_instructions + plan_prompt 
+```
+- `history_prompt` is the n-window history of the negotiation of **public answers**. They are formatted such that the agent's name is replaced by `You: `.
+- `scratch_pad` is instructions on the individual CoT steps along with incentive-related instructions of the goals. Currently, each `incentive` has a scratch pad function that gets called based on the agent's incentive.
+- `unified_instructions` are instructions on how to format answers.
+- `plan_prompt` are instructions on how to form plans (won't be called for the last time the agent is prompted).
 
 ---
 
 ### Running the simulation 
 
+- After changing `config.txt`, run the simulation as:
+  
+```
+python main.py --exp_name <OUTPUT_DIR> --agents_num <NUM> --issues_num <NUM> --window_size <NUM> --game_dir ./games_descriptions/<GAME> --rounds_num <NUM>
+```
+- If you need to run Azure APIs, run with the flag `--azure``
+- Specify API keys
+- Change the number of agents and issues according to the game.
+- We used `rounds_num` as (`4*agents_num`)
+- The training script will create an output dir with `exp_name` under `./games_descriptions/<GAME>`. It will also copy `config.txt` and `<GAME>/scores_files`
+
 ---
 
 ### Evaluation 
+1- `evaluation/evaluate_deals.ipynb`:
+- Measures metrics: any success rate, final success rate, and ratio of wrong scores. Change the following according to the game:
+  ```python
+  HOME = '<HOME>'
+  OUTPUT_DIR = os.path.join(HOME,'LLM-Deliberation/games_descriptions/base/output/all_coop')
+  AGENTS_NUM = 6
+  ISSUES_NUM = 5
+  NUM_ROUNDS = 24
+  ```
+- Use the same notebook to create figures of agents' deals
+
+2- `evaluation/score_leakage.py`:
+- Use GPT-4 as a judge to evaluate whether scores where leaked in the public answers.
+- Specify the following arguments:
+```python
+MAX_THREADS = 60 
+
+parser = argparse.ArgumentParser(
+                    prog='Verifier')
+
+parser.add_argument('--azure_openai_api', default='', help='azure api') 
+parser.add_argument('--azure_openai_endpoint', default='', help='azure endpoint')   
+parser.add_argument('--model_name', default='', help='azure model')  
+parser.add_argument('--exp_dir')
+
+args, _ = parser.parse_known_args()
+
+os.environ["AZURE_OPENAI_API_KEY"] = args.azure_openai_api
+os.environ["AZURE_OPENAI_ENDPOINT"] = args.azure_openai_endpoint
+```
+- Note that this script creates parallel calls to GPT-4. **Be mindful of cost as it may accumulate quickly**.
+
+3- `evaluation/adjust_games.ipynb` 
+- This script can be used to visualize the number of possible deals (and also possible deals per agent) after changing the scores or minimum thresholds of agents.
+- Change the following parameters:
+```python
+HOME = '/HOME/'
+GAME_DIR = os.path.join(HOME,'LLM-Deliberation/games_descriptions/base/')
+AGENTS_NUM = 6
+ISSUES_NUM = 5
+```
 
 ---
 
