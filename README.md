@@ -23,6 +23,19 @@ There is an growing interest in using Large Language Models (LLMs) in multi-agen
 
 ---
 
+## Table of Content 
+- [Setup](#setup)
+- [Games](#Games)
+- [Setting the game and simulation configuration](#Setting-the-game-and-simulation-configuration)
+- [Guide on how the prompts are organized](#Guide-on-how-the-prompts-are-organized)
+- [Running the simulation](#Running-the-simulation)
+- [Evaluation](#Evaluation)
+- [Logs](#Logs)
+- [Citation](#citation)
+
+---
+  
+
 ### Setup 
 
 - Create a new enviroment and install the following:
@@ -177,4 +190,20 @@ ISSUES_NUM = 5
 ---
 
 ### Logs 
+
+---
+
+### Citation 
+If you find our paper, dataset, or this repo helpful, please cite our paper:
+
+``` 
+@misc{abdelnabi2024trackcatchingllmtask,
+      title={Cooperation, Competition, and Maliciousness: LLM-Stakeholders Interactive Negotiation}, 
+      author={Sahar Abdelnabi and Amr Gomaa and Sarath Sivaprasad and Lea Schönherr and Mario Fritz},
+      journal={arXiv preprint arXiv:2309.17234},
+      year={2023}
+      url={https://arxiv.org/abs/2309.17234}, 
+}
+```
+
 
