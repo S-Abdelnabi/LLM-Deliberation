@@ -6,18 +6,17 @@ import numpy as np
 import vertexai
 import random 
 
-def _setup_hf_model(model_name,max_new_tokens=7000):
+def setup_hf_model(model_name,cache_dir='/disk1/', max_new_tokens=7000):
     """
     Sets up a Hugging Face model and tokenizer, caching it for future use.
     """
-    config = AutoConfig.from_pretrained(model_name, use_cache=True)
-    model = AutoModelForCausalLM.from_pretrained(model_name, config=config)
+    config = AutoConfig.from_pretrained(model_name, use_cache=True, cache_dir=os.path.join(cache_dir,model_name),device_map='auto')
+    model = AutoModelForCausalLM.from_pretrained(model_name, config=config, cache_dir=os.path.join(cache_dir,model_name),device_map='auto')
     model.eval()
-    model.cuda()
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_cache=True)
     tokenizer.pad_token = tokenizer.eos_token
     pipeline_gen = pipeline("text-generation", model=model, tokenizer=tokenizer, max_new_tokens=max_new_tokens,
-                                 return_full_text=False, device=0)
+                                 return_full_text=False)
     return model, tokenizer, pipeline_gen 
 
 
@@ -30,8 +29,8 @@ def load_setup(game_dir, agents_num):
         2) The prefix file name of the agent (without ".txt" and without incentive)
         3) The role of the player, at the moment this can be:
             - player: no specific assigned role 
-            - veto: this is p2 
-            - voting_moderator: this is p1 
+            - p2: this is p2 
+            - p1: this is p1 
             - target: this is the target in the adversarial game 
         4) incentive: this is the assigned incentive (at the moment this can be cooperative, greedy, untargeted_adv, targeted_adv)
         5) model: this is the assigned model for this player 

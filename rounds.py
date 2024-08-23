@@ -46,10 +46,10 @@ class RoundPrompts:
         #collate 
         slot_prompt = history_prompt + scratch_pad + unified_instructions + plan_prompt 
         
-        if self.incentive == 'greedy':
-            print('======')
-            print(slot_prompt)
-            print('======')
+        # if self.incentive == 'targeted_adv':
+        #     print('======')
+        #     print(slot_prompt)
+        #     print('======')
         
         return slot_prompt 
     

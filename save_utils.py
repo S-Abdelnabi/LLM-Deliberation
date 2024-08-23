@@ -46,7 +46,7 @@ def extract_plan(answer):
         plan = answer.split('<PLAN>')[-1].split("</PLAN>")[0]
         return plan
     elif "<PLAN>" in answer: 
-        plan = plan.split('<PLAN>')[-1]
+        plan = answer.split('<PLAN>')[-1]
         return plan 
     return ''
 

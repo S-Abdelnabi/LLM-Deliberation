@@ -7,12 +7,13 @@ import numpy as np
 import os
 import openai 
 import vertexai 
+import shutil
 from agent import Agent 
 from initial_prompts import InitialPrompt
 from rounds import RoundPrompts 
 
 
-from utils import load_setup, set_constants, randomize_agents_order
+from utils import load_setup, set_constants, randomize_agents_order, setup_hf_model
 from save_utils import create_outfiles,save_conversation 
 
 parser = argparse.ArgumentParser(description='big negotiation!!')
@@ -56,22 +57,34 @@ args = parser.parse_args()
 
 OUTPUT_DIR = os.path.join(args.game_dir,args.output_dir,args.exp_name)
 
+        
+
 # SET AZURE, OpenAI and GEMINI APIs env variables 
 set_constants(args) 
 
 # Create output file, or load files if restart is given to continue on last experiments 
 agent_round_assignment, start_round_idx, history  = create_outfiles(args,OUTPUT_DIR)
 
+# Dump config file and scores in OUTPUT_DIR 
+shutil.copyfile(os.path.join(args.game_dir,'config.txt'), os.path.join(OUTPUT_DIR,'config.txt'))
+shutil.copytree(os.path.join(args.game_dir,'scores_files'), os.path.join(OUTPUT_DIR,'scores_files'),dirs_exist_ok=True)
+
 # Load setups of agents from config file. File should contain names, file names, roles, incentives, and models 
 # Also load initial deal file and return a dict of role to agent names 
 agents,initial_deal,role_to_agent_names = load_setup(args.game_dir, args.agents_num)
 
+# Load HF models 
+hf_models = {}
+
 
 # Instaniate agents (initial prompt, round prompt, agent class)
 for name in agents.keys(): 
+    if 'hf' in agents[name]['model'] and not agents[name]['model'] in hf_models:
+        hf_models[agents[name]['model']] = setup_hf_model(agents[name]['model'].split('hf_')[-1], cache_dir=args.hf_home)
+        
     inital_prompt_agent = InitialPrompt(args.game_dir, name, agents[name]['file_name'],\
                                         role_to_agent_names['p1'], role_to_agent_names['p2'], \
-                                        num_issues=args.issues_num, incentive=agents[name]['incentive'])
+                                        num_issues=args.issues_num, num_agents= args.agents_num, incentive=agents[name]['incentive'])
     
     round_prompt_agent = RoundPrompts(name, role_to_agent_names['p1'],initial_deal,\
                                     incentive=agents[name]['incentive'], window_size=args.window_size,
@@ -79,7 +92,7 @@ for name in agents.keys():
                                     rounds_num=args.rounds_num, agents_num=args.agents_num)      
 
         
-    agent_instance = Agent(inital_prompt_agent,round_prompt_agent,name,args.temp,model=agents[name]['model'],azure=args.azure)
+    agent_instance = Agent(inital_prompt_agent,round_prompt_agent,name,args.temp,model=agents[name]['model'],azure=args.azure,hf_models=hf_models)
     agents[name]['instance'] = agent_instance
 
 
