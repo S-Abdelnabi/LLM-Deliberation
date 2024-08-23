@@ -139,7 +139,7 @@ python main.py --exp_name <OUTPUT_DIR> --agents_num <NUM> --issues_num <NUM> --w
 2- `evaluation/score_leakage.py`:
 - Use GPT-4 as a judge to evaluate whether scores where leaked in the public answers.
 - Specify the following arguments:
-```
+```python
 MAX_THREADS = 60 
 
 parser = argparse.ArgumentParser(
@@ -160,7 +160,7 @@ os.environ["AZURE_OPENAI_ENDPOINT"] = args.azure_openai_endpoint
 3- `evaluation/adjust_games.ipynb` 
 - This script can be used to visualize the number of possible deals (and also possible deals per agent) after changing the scores or minimum thresholds of agents.
 - Change the following parameters:
-```
+```python
 HOME = '/HOME/'
 GAME_DIR = os.path.join(HOME,'LLM-Deliberation/games_descriptions/base/')
 AGENTS_NUM = 6
