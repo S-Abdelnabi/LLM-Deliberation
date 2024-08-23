@@ -50,8 +50,8 @@ def load_setup(output_dir, agents_num, num_issues):
 
 
 
-def calculator(scores,deal):
-    if len(deal) != 5: return 0 
+def calculator(scores,deal,num_issues=5):
+    if len(deal) != num_issues: return 0 
     deal_sum = 0
     for issue in deal:
         if issue == '' or len(issue)!= 2 : return 0
@@ -61,37 +61,13 @@ def calculator(scores,deal):
     return deal_sum 
 
 
-def extract_deal(answer): 
-    
+def extract_deal(answer,num_issues=5): 
     answer = answer.replace('\n','')
+    issue_names = string.ascii_uppercase[:26] 
     deal = []
-    issues_suggested = 0 
-    if 'A' in answer: 
-        option = re.findall("A[1-5]", answer,re.DOTALL)
-        deal.append(option[0]) if option else deal.append('')
-        if option: issues_suggested +=1 
-
-        
-    if 'B' in answer:
-        option = re.findall("B[1-5]", answer,re.DOTALL)
-        deal.append(option[0]) if option else deal.append('')
-        if option: issues_suggested +=1 
-
-        
-    if 'C' in answer:
-        option = re.findall("C[1-5]", answer,re.DOTALL)
-        deal.append(option[0]) if option else deal.append('')
-        if option: issues_suggested +=1 
-
-        
-    if 'D' in answer:
-        option = re.findall("D[1-5]", answer,re.DOTALL)
-        deal.append(option[0]) if option else deal.append('')
-        if option: issues_suggested +=1 
-
-        
-    if 'E' in answer:
-        option = re.findall("E[1-5]", answer,re.DOTALL)
+    issues_suggested=0
+    for i in range(0,num_issues):
+        option = re.findall(f'{issue_names[i]}[1-9]', answer,re.DOTALL)
         deal.append(option[0]) if option else deal.append('')
         if option: issues_suggested +=1 
             
