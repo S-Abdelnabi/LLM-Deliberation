@@ -197,7 +197,7 @@ ISSUES_NUM = 5
 If you find our paper, dataset, or this repo helpful, please cite our paper:
 
 ``` 
-@misc{abdelnabi2024trackcatchingllmtask,
+@misc{abdelnabi2023negotiation,
       title={Cooperation, Competition, and Maliciousness: LLM-Stakeholders Interactive Negotiation}, 
       author={Sahar Abdelnabi and Amr Gomaa and Sarath Sivaprasad and Lea Schönherr and Mario Fritz},
       journal={arXiv preprint arXiv:2309.17234},
