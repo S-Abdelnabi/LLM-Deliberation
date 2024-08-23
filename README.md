@@ -25,7 +25,14 @@ There is an growing interest in using Large Language Models (LLMs) in multi-agen
 
 ### Setup 
 
-- Please check `req.txt`
+- Create a new enviroment and install the following:
+```
+conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install conda-forge::transformers
+pip install google-cloud-aiplatform
+pip install openai
+pip install accelerate
+```
 
 ---
 
