@@ -8,7 +8,7 @@ There is an growing interest in using Large Language Models (LLMs) in multi-agen
 - You can find [here](https://amrgomaaelhady.github.io/LLM-Deliberation-Demo/) an example of one of our runs with GPT-4 
 
 <p align="center">
-<img src="https://github.com/S-Abdelnabi/LLM-Deliberation/blob/main/teaser_fig.PNG" width="750">
+<img src="https://github.com/S-Abdelnabi/LLM-Deliberation/blob/main/teaser.png" width="750">
 </p>
 
 ---
