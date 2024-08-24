@@ -76,6 +76,7 @@ pip install accelerate
   - `<GAME>/initial_deal.txt`: This is the most preferred option for `p1` that will be used to start the negotiation.
     
 - We include `greedy`, `targeted_adv`, `untargeted_adv`, `cooperative` incentives for the `base` game according to the results in the paper. Other games have currently only the `cooperative` variant.
+- **If you would like to support another incentive**, create a new sub-directory and write the individual instructions for agents you would like to combine that incentive with. 
 
 ---
 
@@ -126,6 +127,9 @@ slot_prompt = history_prompt + scratch_pad + unified_instructions + plan_prompt
 - `scratch_pad` is instructions on the individual CoT steps along with incentive-related instructions of the goals. Currently, each `incentive` has a scratch pad function that gets called based on the agent's incentive.
 - `unified_instructions` are instructions on how to format answers.
 - `plan_prompt` are instructions on how to form plans (won't be called for the last time the agent is prompted).
+
+### Supporting new incentives:
+- If you would like to support another incentive, create new functions for that incentive in *initial* and *round* prompts if needed. 
 
 ---
 
