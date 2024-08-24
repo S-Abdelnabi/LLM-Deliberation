@@ -1,6 +1,0 @@
-Foreign agency,initial_prompts_game2/foreign_agency.txt,veto,gpt-4-0613
-Project manager,initial_prompts_game2/project_manager.txt,voting_moderator,gpt-4-0613
-The government,initial_prompts_game2/government.txt,player,gpt-4-0613
-Landowners,initial_prompts_game2/landowners.txt,player,gpt-4-0613
-NGO,initial_prompts_game2/NGO.txt,player,gpt-4-0613
-Activists,initial_prompts_game2/activists.txt,player,gpt-4-0613

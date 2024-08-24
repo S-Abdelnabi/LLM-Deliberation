@@ -1,6 +1,0 @@
-The Department of Tourism,initial_prompts_base_greedy/DoT.txt,veto,gpt-4-0613
-The Environmental League,initial_prompts_base_greedy/enviroment.txt,player,gpt-4-0613
-The Mayor,initial_prompts_base_greedy/mayor_greedy.txt,greedy,gpt-4-0613
-Other Cities,initial_prompts_base_greedy/other_cities.txt,player,gpt-4-0613
-SportCo,initial_prompts_base_greedy/SportCo.txt,voting_moderator,gpt-4-0613
-The local Labour Union,initial_prompts_base_greedy/union_greedy.txt,greedy,gpt-4-0613

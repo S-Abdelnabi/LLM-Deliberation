@@ -1,6 +1,0 @@
-The Ministry of Culture and Sport,initial_prompts_base_rewritten/department.txt,veto,gpt-4-0613
-The Green Alliance,initial_prompts_base_rewritten/enviroment.txt,player,gpt-4-0613
-The Governor,initial_prompts_base_rewritten/mayor.txt,player,gpt-4-0613
-Neighbouring cities,initial_prompts_base_rewritten/other_cities.txt,player,gpt-4-0613
-Eventix,initial_prompts_base_rewritten/company.txt,voting_moderator,gpt-4-0613
-The Local Workers' Union,initial_prompts_base_rewritten/union.txt,player,gpt-4-0613
