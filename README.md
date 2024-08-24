@@ -159,7 +159,10 @@ history['content']["rounds"].append({'agent':agent_name, 'prompt': prompt, 'full
   ISSUES_NUM = 5
   NUM_ROUNDS = 24
   ```
-- Use the same notebook to create figures of agents' deals
+- Use the same notebook to create figures of agents' deals such as the ones in the paper:
+<p align="center">
+<img src="https://github.com/S-Abdelnabi/LLM-Deliberation/blob/main/p1.png" width="350">
+</p>
 
 2- `evaluation/score_leakage.py`:
 - Use GPT-4 as a judge to evaluate whether scores where leaked in the public answers.
