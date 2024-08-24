@@ -197,6 +197,7 @@ ISSUES_NUM = 5
 ## Logs 
 
 - We share logs of most of our experiments under `logs`.
+- Please note that some logs were generated with our previous code base and the logs were saved in a slightly different scheme. Please refer to `old_code` branch (we will add more details TBD).
 
 ---
 
