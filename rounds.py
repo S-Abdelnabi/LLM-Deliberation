@@ -20,7 +20,7 @@ class RoundPrompts:
         
         
         if first and self.p1_name == self.agent_name: #start the negotiation by P1's deal 
-            return build_first_slot(self.initial_deal)
+            return build_first_slot(self.initial_deal,self.p1_name)
         
         #get history 
         history_prompt = self.get_history_input(history,final_round=final_round,final_vote=final_vote)
