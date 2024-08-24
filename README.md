@@ -191,11 +191,7 @@ ISSUES_NUM = 5
 
 ### Logs 
 
-- We share logs of experiments under `logs`.
-  - Currently:
-    - All greedy with base game and GPT-4 model
-    - All cooperative with base game and temperature 1 and GPT-4
-    - All cooperative with base game, 7-player variant, and GPT-4  
+- We share logs of most of our experiments under `logs`.
 
 ---
 
