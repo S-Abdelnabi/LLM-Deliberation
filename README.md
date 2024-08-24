@@ -1,7 +1,7 @@
 ## [Cooperation, Competition, and Maliciousness: LLM-Stakeholders Interactive Negotiation](https://arxiv.org/abs/2309.17234)
 - **Authors: Sahar Abdelnabi, Amr Gomaa, Sarath Sivaprasad, Lea Schönherr, Mario Fritz**
 
-### Abstract 
+## Abstract 
 There is an growing interest in using Large Language Models (LLMs) in multi-agent systems to tackle interactive real-world tasks that require effective collaboration and assessing complex situations. Yet, we still have a limited understanding of LLMs' communication and decision-making abilities in multi-agent setups. The fundamental task of negotiation spans many key features of communication, such as cooperation, competition, and manipulation potentials. Thus, we propose using scorable negotiation to evaluate LLMs. We create a testbed of complex multi-agent, multi-issue, and semantically rich negotiation games. To reach an agreement, agents must have strong arithmetic, inference, exploration, and planning capabilities while integrating them in a dynamic and multi-turn setup. We propose multiple metrics to rigorously quantify agents' performance and alignment with the assigned role. We provide procedures to create new games and increase games' difficulty to have an evolving benchmark. Importantly, we evaluate critical safety aspects such as the interaction dynamics between agents influenced by greedy and adversarial players. Our benchmark is highly challenging; GPT-3.5 and small models mostly fail, and GPT-4 and SoTA large models (e.g., Llama-3 70b) still underperform in adversarial, noisy, and more competitive games. 
 
 ### Example 
@@ -13,7 +13,7 @@ There is an growing interest in using Large Language Models (LLMs) in multi-agen
 
 ---
 
-### The repo includes:
+## The repo includes:
 
 * All games and game variants developed in the paper 
 * All logs from experiments in the paper
@@ -36,7 +36,7 @@ There is an growing interest in using Large Language Models (LLMs) in multi-agen
 ---
   
 
-### Setup 
+## Setup 
 
 - Create a new enviroment and install the following:
 ```
@@ -49,7 +49,7 @@ pip install accelerate
 
 ---
 
-### Games 
+## Games 
 - All games can be found under `games_descriptions` (under construction). Current games are:
   - `Base` game
   - `Base rewritten`: base game rewritten by GPT-4
@@ -79,7 +79,7 @@ pip install accelerate
 
 ---
 
-### Setting the game and simulation configuration 
+## Setting the game and simulation configuration 
 - Change `<GAME>/config.txt` to run customized combinations of agents' models, incentives, etc and varying number of agents, etc.
 - Each line in `config.txt` corresponds to one agent.
 - Each line should be organized as `<AGENT NAME>, <FILE NAME>, <ROLE>, <INCENTIVE>, <MODEL>`:
@@ -92,7 +92,7 @@ pip install accelerate
 
 ---
 
-### Guide on how the prompts are organized 
+## Guide on how the prompts are organized 
 - The agents have 1) **initial prompts** and 2) **round prompts**. They are formed as follows:
 
 1- **initial prompts**
@@ -129,7 +129,7 @@ slot_prompt = history_prompt + scratch_pad + unified_instructions + plan_prompt
 
 ---
 
-### Running the simulation 
+## Running the simulation 
 
 - After changing `config.txt`, run the simulation as:
   
@@ -144,7 +144,7 @@ python main.py --exp_name <OUTPUT_DIR> --agents_num <NUM> --issues_num <NUM> --w
 
 ---
 
-### Evaluation 
+## Evaluation 
 1- `evaluation/evaluate_deals.ipynb`:
 - Measures metrics: any success rate, final success rate, and ratio of wrong scores. Change the following according to the game:
   ```python
@@ -189,13 +189,13 @@ ISSUES_NUM = 5
 
 ---
 
-### Logs 
+## Logs 
 
 - We share logs of most of our experiments under `logs`.
 
 ---
 
-### Citation 
+## Citation 
 If you find our paper, dataset, or this repo helpful, please cite our paper:
 
 ``` 
