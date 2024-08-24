@@ -50,7 +50,7 @@ pip install accelerate
 ---
 
 ## Games 
-- All games can be found under `games_descriptions` (under construction). Current games are:
+- All games can be found under `games_descriptions. Current games are:
   - `Base` game
   - `Base rewritten`: base game rewritten by GPT-4
   - 7-player and 6-issue variant extended from base game
