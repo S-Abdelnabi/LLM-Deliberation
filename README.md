@@ -141,6 +141,11 @@ python main.py --exp_name <OUTPUT_DIR> --agents_num <NUM> --issues_num <NUM> --w
 - Change the number of agents and issues according to the game.
 - We used `rounds_num` as (`4*agents_num`)
 - The training script will create an output dir with `exp_name` under `./games_descriptions/<GAME>`. It will also copy `config.txt` and `<GAME>/scores_files`
+- The history file will have the following format:
+```python
+history['content']["rounds"].append({'agent':agent_name, 'prompt': prompt, 'full_answer': full_answer, 'public_answer': public_answer})
+```
+  - `rounds` is a list of length (`args.rounds_num` + 2). The first is the initial prompts and the last one is the deal suggestion by `p1`. `prompt` is the prompt given at this round. `full_answer` is the full answer including the CoT. `public_answer` is the extracted public answer given to agents in the history. 
 
 ---
 
