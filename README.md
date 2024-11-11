@@ -212,12 +212,12 @@ ISSUES_NUM = 5
 If you find our paper, dataset, or this repo helpful, please cite our paper:
 
 ``` 
-@misc{abdelnabi2023negotiation,
-      title={Cooperation, Competition, and Maliciousness: LLM-Stakeholders Interactive Negotiation}, 
-      author={Sahar Abdelnabi and Amr Gomaa and Sarath Sivaprasad and Lea Schönherr and Mario Fritz},
-      journal={arXiv preprint arXiv:2309.17234},
-      year={2023}
-      url={https://arxiv.org/abs/2309.17234}, 
+@inproceedings{
+abdelnabi2024negotiation,
+title={Cooperation, Competition, and Maliciousness: {LLM}-Stakeholders Interactive Negotiation},
+author={Sahar Abdelnabi and Amr Gomaa and Sarath Sivaprasad and Lea Schönherr and Mario Fritz},
+booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+year={2024},
 }
 ```
 
